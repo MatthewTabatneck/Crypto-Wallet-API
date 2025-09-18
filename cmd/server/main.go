@@ -8,6 +8,6 @@ import (
 )
 
 func main() {
-	http.Handle("/ping", handlers.PingHandler)
+	http.HandleFunc("/ping", handlers.PingHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
